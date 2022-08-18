@@ -7,7 +7,7 @@ const App = () => {
     return (
         <>
             <Helmet>
-                <title>Meta Tags — Preview, Edit and Generate</title>
+                <title>Crypto Lurker</title>
                 <meta name="title" content="Crypto Lurker" />
                 <meta name="description" content="Analysis the market of crypto" />
             </Helmet>

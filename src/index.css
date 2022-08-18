@@ -1,13 +1,111 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    -webkit-tap-highlight-color: transparent;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer components {
+    .hamburger div:first-child {
+      @apply rotate-45 translate-y-1.5;
+    }
+    .hamburger div:last-child {
+      @apply -rotate-45 -translate-y-1;
+    }
+  }
+
+.animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  .animation-delay-4000 {
+  animation-delay: 4s;    
+  }
+
+.crypto-description h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000;
+}
+
+.crypto-description h2 {
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: #000;
+}
+
+.crypto-description p {
+    font-size: 1rem;
+    color: grey;
+}
+
+.crypto-description a:link {
+    color: blue;
+}
+
+.sidenav {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+  }
+
+  .main{
+    margin-left: 160px; /* Same as the width of the sidenav */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+  }
+
+  body {
+      background-color: #fafafa;
+  }
+
+  @media only screen and (min-width: 768px) {
+  .blur-filter{
+    background-color: rgba(255,255,255,0.4)!important; 
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+.blur-filter{
+    background-color: rgba(255,255,255,0.9)!important; 
+  }
+}
+
+@layer components {
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #5CE1E6;
+    width: 5px;
+    border-radius: 10px;
+  }
+
+  .custom-scrollbar-dark::-webkit-scrollbar-thumb {
+    background-color: #5CE1E6 }
+}
+
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+}
+
+.overlay {
+  background: rgba(49,49,49,0.8);
 }
